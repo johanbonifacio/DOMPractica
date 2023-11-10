@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Manipulacion DOM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <form>
+    <body>
+        <div class = "heading-container">        
+            <h1 class = "heading">Formulario de estudiantes</h1>
+        </div>
+        <div class = "inputs">
+            <input type = "text" name = "Nombre" required = "required">
+            <span>Nombre</span>
+        </div>
+        <div class = "inputs">
+            <input type = "text" name = "Apellido" required = "required">
+            <span>Apellido</span>
+        </div>
+        <div class = "inputs">
+            <input type = "text" name = "Matricula" required = "required">
+            <span>Matricula</span>
+        </div>
+        <div class = "inputs">
+            <input type = "number" name = "Nota" required = "required" min = "0" max = "100" oninput="validarNota()">
+            <span>Nota</span>
+        </div>
+        <div class = "buttons">
+            <button id = "agregarBtn">Agregar</button>
+        </div> 
+        <table border = "3">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Matricula</th>
+                    <th>Nota</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr align = "center">
+                    <td>Johan</td>
+                    <td>Bonifacio</td>
+                    <td>2022-1064</td>
+                    <td>96</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>    
+    </body>
+    <script src = "script.js"></script>
+</html>
