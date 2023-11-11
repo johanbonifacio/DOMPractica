@@ -178,7 +178,7 @@ input[type="number"]::-webkit-scrollbar {
 .buttons button {
     background: #1d2b3a;
     color: #00dfc4;
-    border: 2px solid #00dfc4; /* Agregar un borde de 2px sólido */
+    border: 2px solid #00dfc4; 
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
