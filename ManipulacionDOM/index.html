@@ -6,31 +6,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
     </head>
-    <form>
+    <form id = "studentForm">
     <body>
         <div class = "heading-container">        
             <h1 class = "heading">Formulario de estudiantes</h1>
         </div>
         <div class = "inputs">
-            <input type = "text" name = "Nombre" required = "required">
+            <input type = "text" name = "studentFName" required = "required">
             <span>Nombre</span>
         </div>
         <div class = "inputs">
-            <input type = "text" name = "Apellido" required = "required">
+            <input type = "text" name = "studentLName" required = "required">
             <span>Apellido</span>
         </div>
         <div class = "inputs">
-            <input type = "text" name = "Matricula" required = "required">
+            <input type = "text" name = "studentID" required = "required">
             <span>Matricula</span>
         </div>
         <div class = "inputs">
-            <input type = "number" name = "Nota" required = "required" min = "0" max = "100" oninput="validarNota()">
+            <input type = "number" name = "studentGrade" required = "required" min = "0" max = "100" oninput="validarNota()">
             <span>Nota</span>
         </div>
         <div class = "buttons">
             <button id = "agregarBtn">Agregar</button>
         </div> 
-        <table border = "3">
+        <table id = "studentTable" border = "3">
             <thead>
                 <tr>
                     <th>Nombre</th>

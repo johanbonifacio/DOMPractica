@@ -3,15 +3,13 @@
 
 // Un boton agregar
 
-document.getElementById("agregarBtn").addEventListener('click', function(){
+const form = document.getElementById("studentForm");
 
-    let nombre = getElementsByName("Nombre")[0].value;
-    let apellido = getElementsByName("Apellido")[0].value;
-    let matricula = getElementsByName("Matricula")[0].value;
-    let nota = getElementsByName("Nota")[0].value;
+form.addEventListener("submit", function(event){
+  event.preventDefault();
 
-    
-
+  let studentFormData = new FormData(form);
+  let studentTableRef = document.getElementById("studentTable");
 });
 
 // input de la Nota
