@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
     </head>
-    <form id = "studentForm">
+    <form id = "studentForm" autocomplete="off">
     <body>
         <div class = "heading-container">        
             <h1 class = "heading">Formulario de estudiantes</h1>
@@ -29,7 +29,9 @@
         </div>
         <div class = "buttons">
             <button id = "agregarBtn">Agregar</button>
-        </div> 
+        </div>
+    </form>
+    <div class = "tableContent">
         <table id = "studentTable" border = "3">
             <thead>
                 <tr>
@@ -41,14 +43,10 @@
             </thead>
             <tbody>
                 <tr align = "center">
-                    <td>Johan</td>
-                    <td>Bonifacio</td>
-                    <td>2022-1064</td>
-                    <td>96</td>
                 </tr>
             </tbody>
         </table>
-    </form>    
+    </div>  
     </body>
     <script src = "script.js"></script>
 </html>

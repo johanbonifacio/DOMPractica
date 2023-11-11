@@ -10,6 +10,19 @@ form.addEventListener("submit", function(event){
 
   let studentFormData = new FormData(form);
   let studentTableRef = document.getElementById("studentTable");
+  let newStudentRowRef = studentTableRef.insertRow(-1);
+
+  let newFNameCellRef = newStudentRowRef.insertCell(0);
+  let newLNameCellRef = newStudentRowRef.insertCell(1);
+  let newIDCellRef = newStudentRowRef.insertCell(2);
+  let newGradeCellRef = newStudentRowRef.insertCell(3);
+  
+  newFNameCellRef.textContent = studentFormData.get("studentFName");
+  newLNameCellRef.textContent = studentFormData.get("studentLName");
+  newIDCellRef.textContent = studentFormData.get("studentID");
+  newGradeCellRef.textContent = studentFormData.get("studentGrade");
+
+  form.reset();
 });
 
 // input de la Nota
@@ -22,3 +35,5 @@ function validarNota() {
       notaInput.value = valor.substring(0, 2);
     }
   }
+
+  
