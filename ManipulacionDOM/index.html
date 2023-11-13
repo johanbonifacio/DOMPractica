@@ -12,24 +12,32 @@
             <h1 class = "heading">Formulario de estudiantes</h1>
         </div>
         <div class = "inputs">
-            <input type = "text" name = "studentFName" required = "required">
+            <input type = "text" name="studentFName" id="Nombre"required = "required">
             <span>Nombre</span>
         </div>
         <div class = "inputs">
-            <input type = "text" name = "studentLName" required = "required">
+            <input type = "text" name="studentLName" id="Apellido"required = "required">
             <span>Apellido</span>
         </div>
         <div class = "inputs">
-            <input type = "text" name = "studentID" required = "required">
+            <input type = "text" name="studentID" id="Matricula"required = "required">
             <span>Matricula</span>
         </div>
         <div class = "inputs">
-            <input type = "number" name = "studentGrade" required = "required" min = "0" max = "100" oninput="validarNota()">
+            <input type = "text" name="StudentAsignature" id="Materia"required = "required">
+            <span>Materia</span>
+        </div>                       
+        <div class = "inputs">
+            <input type = "number" name="studentGrade" id="Nota"required = "required" min = "0" max = "100" oninput="validarNota()">
             <span>Nota</span>
         </div>
         <div class = "buttons">
             <button id = "agregarBtn">Agregar</button>
+            <button id="UpdateBtn">Actualizar</button>
+
         </div>
+    
+    
     </form>
     <div class = "tableContent">
         <table id = "studentTable" border = "3">
@@ -38,15 +46,19 @@
                     <th>Nombre</th>
                     <th>Apellido</th>
                     <th>Matricula</th>
+                    <th>Materia</th>
                     <th>Nota</th>
+                    <th colspan="2">Acciones</th>
+ 
                 </tr>
             </thead>
             <tbody>
                 <tr align = "center">
                 </tr>
             </tbody>
-        </table>
+        
+            </table>
     </div>  
     </body>
     <script src = "script.js"></script>
-</html>
+</html> 
