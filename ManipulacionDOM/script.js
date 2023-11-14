@@ -21,12 +21,11 @@ form.addEventListener("submit", function(event){
   
 // Guardamos los datos del alumno en las celdas correspondientes
 
-newFNameCellRef.textContent = studentFormData.get("studentFName");
+  newFNameCellRef.textContent = studentFormData.get("studentFName");
   newLNameCellRef.textContent = studentFormData.get("studentLName");
   newIDCellRef.textContent = studentFormData.get("studentID");
   newAsigntrCellRef.textContent = studentFormData.get("StudentAsignature")
   newGradeCellRef.textContent = studentFormData.get("studentGrade");
-
 
   //boton de editar
 editButton = document.createElement("button");
@@ -43,7 +42,12 @@ editButton.classList.add("editButton")
   let editCell = newStudentRowRef.insertCell(5);
   let deleteCell = newStudentRowRef.insertCell(6);
   editCell.appendChild(editButton);
-  deleteCell.appendChild(deleteButton);  
+  deleteCell.appendChild(deleteButton);
+  
+  deleteButton.addEventListener("click", function () {
+    let rowIndex = this.parentNode.parentNode.rowIndex;
+    studentTableRef.deleteRow(rowIndex);
+  });
 
 form.reset()
 });
@@ -66,10 +70,10 @@ document.getElementById('Matricula').value = row.cells[2].textContent;
   
      actualizar.style.display ="block";
      agregarBtn.disabled = true;
+     agregarBtn.style.display = "none"
 
    }
    });
-
 
     let actualizar = document.getElementById("UpdateBtn")    
   actualizar.style.display= "none";
@@ -93,9 +97,9 @@ document.getElementById('Matricula').value = row.cells[2].textContent;
 
        actualizar.style.display = "none";
        agregarBtn.disabled = false;
+       agregarBtn.style.display = "block";
          } 
         }
-
     
 // input de la Nota
 function validarNota() {
